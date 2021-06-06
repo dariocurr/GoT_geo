@@ -1,2 +1,2 @@
 # GoT_geo_app
-Discover geo-curious GoT stats (here)[https://dariocurr.shinyapps.io/GoT-plots/]
+Discover geo-curious GoT stats [https://dariocurr.shinyapps.io/GoT-plots/](here)

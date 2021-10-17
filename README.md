@@ -1,2 +1,3 @@
-# GoT_geo
-Discover geo-curious GoT stats [here](https://dariocurr.shinyapps.io/GoT-plots/)
+# Game of Thrones geo-stats
+
+[R Shiny app](https://dariocurr.shinyapps.io/GoT-plots/) developed to discover geo-curious GoT stats

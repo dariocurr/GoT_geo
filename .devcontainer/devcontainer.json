@@ -5,7 +5,6 @@
 		"args": {
 			"SHINY_VERSION": "latest",
 			"USER": "vscode",
-			"PASSWORD": "vscode"
 		}
 	},
 	"remoteUser": "vscode"

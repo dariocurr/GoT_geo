@@ -3,7 +3,7 @@
 [R Shiny app](https://dariocurr.shinyapps.io/GoT-plots/) developed to discover
 geo-curious GoT stats.
 
-![Risk Board](/img/home.png)
+![Home geo-stats](/img/home.png)
 
 For a better understanding, please take a look at the
 [report](/doc/final_report.pdf).

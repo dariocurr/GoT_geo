@@ -1,7 +1,7 @@
 # Game of Thrones geo-stats
 
-[R Shiny app](https://dariocurr.shinyapps.io/GoT-plots/) developed to discover
-geo-curious GoT stats.
+[R Shiny](https://shiny.rstudio.com/) [application](https://dariocurr.shinyapps.io/GoT-plots/) developed to discover
+curious Game of Thrones geo-stats.
 
 <img width="700" alt="Home geo-stats" src="/img/home.png">
 

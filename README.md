@@ -3,7 +3,7 @@
 [R Shiny app](https://dariocurr.shinyapps.io/GoT-plots/) developed to discover
 geo-curious GoT stats.
 
-![Home geo-stats](/img/home.png)
+<img width="700" alt="Home geo-stats" src="/img/home.png">
 
 For a better understanding, please take a look at the
 [report](/doc/final_report.pdf).

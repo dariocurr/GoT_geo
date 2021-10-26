@@ -12,9 +12,6 @@ RUN apt update
 RUN apt upgrade -y
 RUN apt install git libudunits2-dev libgdal-dev libssl-dev xdg-utils -y
 
-RUN git config --global user.email "dariocurr@gmail.com",
-RUN git config --global user.name "Dario Curreri",
-
 RUN Rscript -e 'install.packages(c("readr", "dplyr", "sf", "ggplot2"))'
 
 USER ${USER}

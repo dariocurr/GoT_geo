@@ -97,14 +97,32 @@ scenes_stats = scenes %>%
 
 # define UI for application
 ui <- fluidPage(
-    
-    # application logo
-    img(
-        src = "logo.jpg",
-        width = 300,
-        height = 150
+
+    # add fontawesome
+    tags$head(tags$script(src="https://use.fontawesome.com/releases/v5.15.2/js/all.js")),
+
+    br(),
+    fluidRow(
+        column(
+            width = 6,
+            # application logo
+            img(
+                src = "logo.jpg",
+                width = 280,
+                height = 140
+            ),
+        ),
+        column(
+            width = 6,
+            # add link to repo
+            includeHTML("www/repo.html"),
+            align = "center",
+            style = "padding-top: 35px",
+        )
     ),
-    
+    br(),
+    br(),    
+
     # adding a tabset panel to ui
     tabsetPanel(
         
@@ -117,6 +135,7 @@ ui <- fluidPage(
             titlePanel(
                 "Discover where the most important characters have been during seasons"
             ),
+            br(),
             
             # adding a sidebar layout
             sidebarLayout(

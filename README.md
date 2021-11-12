@@ -15,5 +15,5 @@ In order to run and develop the app locally, build the `dev container` using the
 [VScode](https://code.visualstudio.com/). Once attached, run this command:
 
 ```sh
-Rscript -e 'library(methods); shiny::runApp("src/", launch.browser = TRUE)'
+Rscript -e 'library(methods); options(shiny.autoreload = TRUE); shiny::runApp("src/", launch.browser = TRUE)'
 ```

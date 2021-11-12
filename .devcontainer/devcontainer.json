@@ -1,10 +1,10 @@
 {
-	"name": "R Shiny",
+	"name": "GoT geo",
 	"build": {
 		"dockerfile": "Dockerfile",
+		"context": "..",
 		"args": {
 			"SHINY_VERSION": "latest",
-			"USER": "vscode",
 		}
 	},
 	"remoteUser": "vscode"

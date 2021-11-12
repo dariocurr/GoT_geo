@@ -1,17 +1,28 @@
-ARG SHINY_VERSION
+# select image
+ARG SHINY_VERSION="latest"
 FROM rocker/shiny:${SHINY_VERSION}
+LABEL author="dariocurr@gmail.com" maintainer="dariocurr@gmail.com" version="0.0.1"
 
-ARG USER
+# create vscode user
+RUN groupadd --gid 1000 vscode \
+	&& useradd --uid 1000 --gid 1000 -m vscode \
+	&& apt-get update \
+	&& apt upgrade -y \
+	&& apt-get install -y sudo \
+	&& echo vscode ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/vscode \
+	&& chmod 0440 /etc/sudoers.d/vscode
 
-USER root
+# install git zsh and other useful packages
+RUN apt install git libudunits2-dev libgdal-dev libssl-dev xdg-utils zsh -y
 
-RUN useradd -ms /bin/bash ${USER}
-RUN chown -R ${USER}:${USER} /usr/local/
+# install R packages
+COPY requirements*.txt /tmp/r-tmp/
+COPY .devcontainer/requirements.sh /tmp/r-tmp/
+RUN Rscript -e "install.packages('devtools')" \
+	&& sudo sh ./tmp/r-tmp/requirements.sh \
+	&& sudo rm -rf /tmp/r-tmp/
 
-RUN apt update
-RUN apt upgrade -y
-RUN apt install git libudunits2-dev libgdal-dev libssl-dev xdg-utils -y
-
-RUN Rscript -e 'install.packages(c("readr", "dplyr", "sf", "ggplot2"))'
-
-USER ${USER}
+# install ohmyzsh
+USER vscode
+RUN sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+COPY .devcontainer/.zshrc .

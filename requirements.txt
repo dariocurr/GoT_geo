@@ -3,3 +3,4 @@ dplyr
 sf
 ggplot2
 rsconnect
+-- please do not remove this end line and write packages as follows: name(required) version(optional) --
